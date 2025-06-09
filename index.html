@@ -7,6 +7,115 @@
   <title>DMRAK - Kebutuhan Minimarket</title>
   <link rel="stylesheet" href="style.css" />
 </head>
+  Keren! Kamu ingin meningkatkan tampilan profesional website kamu — ini langkah yang sangat tepat. Saya akan bantu jawab 3 hal ini:
+
+
+---
+
+✅ 1. Cara Memasukkan Lagu ke Dalam Website
+
+🔊 Opsi 1: Lagu diputar otomatis (auto play & loop)
+
+<audio autoplay loop>
+  <source src="audio/nama-lagu.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+🔧 Syarat:
+
+Buat folder audio/
+
+Upload file MP3 ke GitHub, contoh: audio/bg-lagu.mp3
+
+Pastikan nama file cocok
+
+
+📌 Note: Autoplay kadang diblok oleh browser modern, jadi lebih aman pakai tombol:
+
+🔘 Opsi 2: Dengan tombol Play/Pause
+
+<audio controls>
+  <source src="audio/bg-lagu.mp3" type="audio/mpeg">
+  Browser kamu tidak mendukung audio.
+</audio>
+
+
+---
+
+✅ 2. Cara Memasukkan Logo di Bagian Atas Website (Header)
+
+Misal kamu punya logo logo.png, simpan di folder images/, lalu:
+
+🔧 Di bagian atas HTML, sebelum judul:
+
+<header class="header">
+  <img src="images/logo.png" alt="Logo DM RAK" class="logo">
+  <h1>DM RAK</h1>
+</header>
+
+💅 Tambahkan CSS:
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 20px;
+}
+
+.logo {
+  width: 50px;
+  height: auto;
+}
+
+
+---
+
+✅ 3. Cara Menambahkan Watermark Logo/Gambar di Tengah Background Website
+
+Misalnya kamu mau pasang logo besar samar-samar di tengah halaman.
+
+Tambahkan di CSS:
+
+body {
+  background-image: url('images/logo.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 300px;
+  background-attachment: fixed;
+  opacity: 0.98;
+}
+
+⚠️ Jika terlalu mencolok, kamu bisa edit logo-nya jadi transparan dulu (pakai PNG transparan), atau atur opacity di logo.png langsung.
+
+
+---
+
+💡 IDE FITUR TAMBAHAN UNTUK WEBSITE LEBIH PROFESIONAL
+
+Fitur	Manfaat
+
+🔍 Search bar	Untuk cari produk lebih cepat
+💬 WhatsApp popup	Chat langsung via WA (pakai link atau plugin sederhana)
+📦 Galeri produk	Tampilkan gambar-gambar besar dan menarik (slider, grid, lightbox)
+📄 PDF Katalog	Tambahkan tombol untuk download katalog PDF
+📱 Responsif	Website tetap rapi saat dibuka dari HP/tablet
+🌐 Meta tag SEO	Agar muncul lebih bagus saat dibagikan di WhatsApp/Google
+
+
+
+---
+
+Kalau kamu upload logo kamu, saya bisa bantu:
+
+Menempatkannya di header
+
+Menjadikan watermark di background
+
+Bahkan buatkan file ZIP final siap upload lagi ke GitHub Pages
+
+
+Mau lanjut saya bantu sekarang? Kirim logonya saja 👇 atau beri tahu fiturnya dulu.
+
 <body>
   <header>
     <h1>DMRAK</h1>
@@ -16,7 +125,10 @@
       <a href="#about">Tentang Kami</a>
       <a href="#contact">Kontak</a>
     </nav>
-  </header>
+  </header> class="header">
+  <img src="images/logodm.png" ALT=" lOGO dm rak" CLASS="LOGO">
+  <H1>dm rak </H1>
+</header>
 
   <section id="home">
     <h2>Perlengkapan Minimarket & Toko</h2>
@@ -40,6 +152,24 @@
             <p> Merk GEA & Sanden
               <p></p> Rp. 6,000,000 - Rp. 7,000,000
         <a href="https://wa.me/628112651479" class="btn-green">Hubungi Kami</a>
+      <section id="products">
+    <h2>Katalog Produk</h2>
+    <div class="product-list">
+      <div class="product">
+        <img src="images/Freezer.jpg" alt="Freezer">
+        <h3>Freezer</h3>
+        <p> Freezer cocok untuk daging beku, frozzen food dan ice cream
+          <p></p> Rp. 3.000.000
+        <a href="https://wa.me/628112651479" class="btn-green">Hubungi Kami</a>
+<section id="products">
+    <h2>Katalog Produk</h2>
+    <div class="product-list">
+      <div class="product">
+        <img src="images/mejakasiralfa.jpg" alt="Meja Kasir Alfa 1 set">
+        <h3>Meja Kasir ALfa 1 set</h3>
+        <p> Meja Kasir 1 set dengan backwall
+          <p></p> Rp. 7.000.000
+        <a href="https://wa.me/628112651479" class="btn-green">Hubungi Kami</a>
       </div>
       <div class="product">
         <img src="images/genset.jpg" alt="Genset Mini">
@@ -59,38 +189,38 @@
         <a href="https://wa.me/628112651479" class="btn-green">Hubungi Kami</a>
       </div>
             <div class="product">
-        <img src="images/rak-gondola.jpg" alt="Rak Gudang">
+        <img src="images/rakgudang.jpg" alt="Rak Gudang">
         <h3>Rak Gudang</h3>
                 <p> Rak Gudang TinggixPanjangxLebar ""200x100x40-50"" ""200x120x40-50"" ""240x100-120x60""
           <p></p> Rp. 650,000 - Rp. 900,000
         <a href="https://wa.me/628112651479" class="btn-green">Hubungi Kami</a>
       </div>
             <div class="product">
-        <img src="images/rak-gondola.jpg" alt="Rak Tabing">
+        <img src="images/tabinghitam.jpg" alt="Rak Tabing">
         <h3>Rak Tabing</h3>
         <a href="https://wa.me/628112651479" class="btn-green">Hubungi Kami</a>
       </div>
             <div class="product">
-        <img src="images/rak-gondola.jpg" alt="Rak Ciki">
+        <img src="images/rakciki.jpg" alt="Rak Ciki">
         <h3>Rak Ciki</h3>
                 <p> Rak Ciki 
           <p></p> Rp. 350,000
         <a href="https://wa.me/628112651479" class="btn-green">Hubungi Kami</a>
       </div>
             <div class="product">
-        <img src="images/rak-obral.jpg" alt="Rak Obral">
+        <img src="images/rakobral.jpg" alt="Rak Obral">
         <h3>Rak Obral</h3>
                 <p> Rak Obral 
           <p></p> Rp. 600,000
         <a href="https://wa.me/628112651479" class="btn-green">Hubungi Kami</a>
       </div>
             <div class="product">
-        <img src="images/rak-gondola.jpg" alt="Rak Wings">
+        <img src="images/wings.jpg" alt="Rak Wings">
         <h3>Rak Wings</h3>
         <a href="https://wa.me/628112651479" class="btn-green">Hubungi Kami</a>
       </div>
             <div class="product">
-        <img src="images/rak-gondola.jpg" alt="Rak Promo">
+        <img src="images/rakpromosi.jpg" alt="Rak Promo">
         <h3>Rak Promo</h3>
                 <p> Rak Promo
           <p></p> Rp. 200,000
